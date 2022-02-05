@@ -23,14 +23,14 @@
                         <h2 class="mt-2">Add Items</h2>
                         <form id="addToList" class="my-2">
                             <label for="addItem">Please Enter An Item To Add:</label><br>
-                            <input type="text" name="addItem" pattern="[A-Za-z]" title="Add Item Input Field"><br>
+                            <input type="text" name="addItem" id="addItem" pattern="[A-Za-z]" title="Add Item Input Field"><br>
                             <span id="addItemButton" class="mt-2 btn btn-primary btn-small rounded-pill">Add Item To List</span>
                         </form>
                         <hr class="border border-dark w-50 mx-auto">
                         <h2 class="mt-2">Remove Items</h2>
-                        <form id="removeToList" class="my-2">
-                            <label for="remItem">Please Enter An Item From Remove:</label><br>
-                            <input type="text" name="remItem" pattern="[A-Za-z]" title="Add Item Input Field"><br>
+                        <form id="remFromList" class="my-2">
+                            <label for="remItems">Please Enter An Item From Remove:</label><br>
+                            <input type="text" name="remItems" id="remItem" pattern="[A-Za-z]" title="Add Item Input Field"><br>
                             <span id="remItemButton" class="mt-2 btn btn-danger btn-small rounded-pill">Remove Item To List</span>
                         </form>
                     </div>
@@ -39,8 +39,25 @@
             <!--Grocery List-->
             <div class="col-12 col-sm-12 col-md-6 px-2">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 mb-5">
                         <h2>Grocery List</h2>
+                        <h4 id="init" class="mt-5">
+                            Your List Will<br>Appear Here
+                        </h4>
+                        <div class="row">
+                            <div class="col-6">
+                                <h4><u>Groceries</u></h4>
+                                <ul id="groceryList" class="mb-5 px-lg-5">
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <h4><u>Quantity</u></h4>
+                                <ul id="listCount" class="mb-5 px-lg-5">
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="feedback" class="p-2 mx-auto rounded-pill"></div>
+                        <button id="remAll" class="btn btn-danger btn-small rounded-pill mx-auto" onclick="removeAll()">Remove All Items</button>
                     </div>
                 </div>
             </div>

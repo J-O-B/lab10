@@ -5,4 +5,17 @@ body{
     min-height: 100vh;
     color: whitesmoke;
     text-align: center;
+    max-width: 100vw;
+    overflow: hidden;
+}
+#remAll{
+    display: block;
+    max-width: 200px !important;
+}
+#feedback{
+    background-color: rgba(255,255,255,0.7);
+    max-width: 300px;
+}
+#listCount{
+    list-style: none;
 }
