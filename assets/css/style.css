@@ -19,3 +19,14 @@ body{
 #listCount{
     list-style: none;
 }
+@media print{
+    #grocerySection{
+        color: #000;
+    }
+    #grocerySection li{
+        font-size: 16px;
+    }
+    #groceryList li{
+        list-style: circle;
+    }
+}

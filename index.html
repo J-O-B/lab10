@@ -12,12 +12,12 @@
     <title>Lab 10</title>
 </head>
 <body>
-    <h1>Grocery List</h1>
+    <h1 class="d-print-none">Grocery List</h1>
 
-    <div class="container-fluid mt-5">
+    <div class="container-fluid mt-5 ">
         <div class="row">
             <!--Add/Remove List-->
-            <div class="col-12 col-sm-12 col-md-6 px-2">
+            <div class="col-12 col-sm-12 col-md-6 px-2 d-print-none">
                 <div class="row">
                     <div class="col-12">
                         <h2 class="mt-2">Add Items</h2>
@@ -31,7 +31,7 @@
                         <form id="remFromList" class="my-2">
                             <label for="remItems">Please Enter An Item From Remove:</label><br>
                             <input type="text" name="remItems" id="remItem" pattern="[A-Za-z]" title="Add Item Input Field"><br>
-                            <span id="remItemButton" class="mt-2 btn btn-danger btn-small rounded-pill">Remove Item To List</span>
+                            <span id="remItemButton" class="mt-2 btn btn-danger btn-small rounded-pill">Remove Item From List</span>
                         </form>
                     </div>
                 </div>
@@ -41,10 +41,10 @@
                 <div class="row">
                     <div class="col-12 mb-5">
                         <h2>Grocery List</h2>
-                        <h4 id="init" class="mt-5">
+                        <h4 id="init" class="mt-5 d-print-none">
                             Your List Will<br>Appear Here
                         </h4>
-                        <div class="row">
+                        <div id="grocerySection" class="row">
                             <div class="col-6">
                                 <h4><u>Groceries</u></h4>
                                 <ul id="groceryList" class="mb-5 px-lg-5">
@@ -56,8 +56,9 @@
                                 </ul>
                             </div>
                         </div>
-                        <div id="feedback" class="p-2 mx-auto rounded-pill"></div>
-                        <button id="remAll" class="btn btn-danger btn-small rounded-pill mx-auto" onclick="removeAll()">Remove All Items</button>
+                        <div id="feedback" class="p-2 mx-auto rounded-pill d-print-none"></div>
+                        <button id="remAll" class="btn btn-danger rounded-pill mt-2 py-1 px-3 border border-dark mx-auto d-print-none" onclick="removeAll()">Remove All Items</button><br>
+                        <button id="print" class="btn btn-info rounded-pill mt-3 py-1 px-3 mx-auto border border-dark d-print-none" onclick="window.print()">Print</button>
                     </div>
                 </div>
             </div>

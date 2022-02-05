@@ -86,8 +86,8 @@ function display(info){
     }
     // Print Item To Dom
     for (i=0; i<final.length; i += 2){
-        domList.innerHTML += `<li class='text-capitalize h4'>${final[i]}</li>`;
-        qwyList.innerHTML += `<li class='text-capitalize h4'>${final[i+1]}</li>`;
+        domList.innerHTML += `<li class='text-capitalize h5'>${final[i]}</li><hr class='border border-dark'>`;
+        qwyList.innerHTML += `<li class='text-capitalize h5'>${final[i+1]}</li><hr class='border border-dark'>`;
     }
     // Give Feedback
     feedback.innerHTML = info;
